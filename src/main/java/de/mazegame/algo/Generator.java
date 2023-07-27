@@ -62,16 +62,16 @@ public class Generator {
      * While generating the maze the spanning-tree (spanning3) of the maze is also built. The spanning3 is a HashMap, which stores
      * a node as the key and an ArrayList as the value of the key in which only valid path-Nodes are stored. It's needed for 
      * finding the solution-path of the maze and for the maze-game, where it's used to validate the intended player movement 
-     * direction by checking, if destination-node exists in the key-node value-ArrayList.                                           <br>
-     *                                                                                                                              <p>
+     * direction by checking, if destination-node exists in the key-node value-ArrayList.                                           <br><p>
+     *                                             
      * 1. Choose the initial cell*, mark it as visited and push it to the stack                                                     <br>
-     * 2. While the stack is not empty										                                                        <br>
-     * 2.1. Pop a cell from the stack and make it a current cell*			                                                        <br>
+     * 2. While the stack is not empty                                                                                              <br>
+     * 2.1. Pop a cell from the stack and make it a current cell*                                                                   <br>
      * 2.2. If the current cell* has any neighbors which have not been visited                                                      <br>
-     * 2.2.1.  Push the current cell* to the stack 			  			                                                            <br>
-     * 2.2.2.  Choose one of the unvisited neighbors			  			                                                        <br>
+     * 2.2.1.  Push the current cell* to the stack                                                                                  <br>
+     * 2.2.2.  Choose one of the unvisited neighbors                                                                                <br>
      * 2.2.3.  Remove the wall between the current cell* and the chosen cell**                                                      <br>
-     * 2.2.4.  Mark the chosen cell** as visited and push it to the stack		                                                    <p>
+     * 2.2.4.  Mark the chosen cell** as visited and push it to the stack                                                           <p>
      * (* currentNode, ** nextNode)                                                                                                 <p>
      *                                                                          
      * Pseudo-code source:                                                                                                          <br>

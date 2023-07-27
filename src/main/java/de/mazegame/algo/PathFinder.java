@@ -47,23 +47,23 @@ public class PathFinder {
      */
     private void setSolutionPath(Node currentNode, Node targetNode) {
         Node nextNode = currentNode;
-        this.solutionPath.push(currentNode);					  // 1.
+        this.solutionPath.push(currentNode);                      // 1.
         
-        while(nextNode != targetNode) {  						  // 2.
-            currentNode = solutionPath.pop();  					  // 2.1.
+        while(nextNode != targetNode) {                           // 2.
+            currentNode = solutionPath.pop();                     // 2.1.
             
-            if (!spanning3.get(currentNode).isEmpty()) {		  // 2.2.
-                this.solutionPath.push(currentNode);			  // 2.2.1.
+            if (!spanning3.get(currentNode).isEmpty()) {          // 2.2.
+                this.solutionPath.push(currentNode);              // 2.2.1.
 
                 nextNode = getRandomPathNodeFrom(currentNode);    // 2.2.2.
                 this.spanning3.get(currentNode).remove(nextNode); // 2.2.3.
                 this.spanning3.get(nextNode).remove(currentNode); // 2.2.4.
 
                 this.solutionPath.push(nextNode);                 // 2.2.5.
-            }													  // 2.3. -> 2.
+            }                                                     // 2.3. -> 2.
         }
-        this.solutionPath.remove(0);						      // 3.
-        this.solutionPath.pop();								  // 4.
+        this.solutionPath.remove(0);                              // 3.
+        this.solutionPath.pop();                                  // 4.
     }
 
     private Node getRandomPathNodeFrom(Node node) {

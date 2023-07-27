@@ -24,7 +24,7 @@ public class PathFinder {
 
     /**
      * Finds the Solution-Path from Players current position (currentNode) to the target position (targetNode) by using only the spanning-tree (spanning3) 
-     * of the maze. The spanning3-dictionary stores a node as the key and an ArrayList as the value of the key-node in which only valid path-Nodes are 
+     * of the maze. The spanning3-HashMap stores a node as the key and an ArrayList as the value of the key-node in which only valid path-Nodes are 
      * stored. While searching for the solution, this copy of the spanning3 gets destroyed.
      * 
      * <pre>
